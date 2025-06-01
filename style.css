@@ -1,0 +1,70 @@
+/* Base layout */
+body {
+  background-color: #000;
+  color: #fff;
+  font-family: Helvetica, Arial, sans-serif;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  text-align: center;
+}
+
+/* Logo */
+.logo {
+  max-width: 300px;
+  margin-bottom: 40px;
+}
+
+/* Mailchimp form customization */
+#mc_embed_signup {
+  background-color: transparent;
+  color: #fff;
+  width: 100%;
+  max-width: 400px;
+}
+
+#mc_embed_signup label,
+#mc_embed_signup .indicates-required {
+  color: #fff;
+}
+
+#mc_embed_signup .mc-field-group input {
+  width: 100%;
+  padding: 12px;
+  margin-top: 8px;
+  border: 1px solid #fff;
+  background-color: #000;
+  color: #fff;
+  border-radius: 4px;
+}
+
+#mc-embedded-subscribe {
+  background-color: #fff;
+  color: #000;
+  font-weight: bold;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-top: 16px;
+}
+
+/* Hide Mailchimp badge */
+#mc_embed_signup .clear.foot img {
+  display: none;
+}
+
+/* Linktree */
+.linktree {
+  margin-top: 40px;
+  color: #fff;
+  text-decoration: underline;
+  font-size: 14px;
+}
+
+.linktree:hover {
+  color: #ccc;
+}
