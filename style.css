@@ -78,3 +78,24 @@ body {
 #mc_embed_signup .clear.foot img {
   display: none;
 }
+
+@media (max-width: 600px) {
+  .bottom-bar {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  #mc_embed_signup .mc-field-group input,
+  #mc-embedded-subscribe {
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .logo {
+    max-width: 80%;
+  }
+
+  .linktree {
+    font-size: 16px;
+  }
+}
