@@ -22,18 +22,20 @@ html, body {
   padding: 20px;
 }
 
-/* ✅ FIXED: Center logo in remaining vertical space */
+/* Center logo in remaining vertical space */
 .logo-wrapper {
-  flex: 1;                         /*  Take up all vertical space between top and bottom bar */
+  flex: 1;                             /* Take up all space above bottom bar */
   display: flex;
-  justify-content: center;        /*  Center horizontally */
-  align-items: center;            /*  Center vertically */
+  justify-content: center;            /* Center horizontally */
+  align-items: center;                /* Center vertically */
   width: 100%;
+  min-height: 0;                      /* Prevent overflow issues on smaller screens */
 }
 
+/* Make logo bigger */
 .logo {
-  max-width: 300px;
-  width: 60%;
+  max-width: 500px;                   
+  width: 80%;                         /* Scale relative to screen size */
   height: auto;
 }
 
