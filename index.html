@@ -4,25 +4,19 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>M58</title>
-
-  <!-- Mailchimp base form styles -->
   <link href="https://cdn-images.mailchimp.com/embedcode/classic-061523.css" rel="stylesheet" type="text/css" />
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+  <div class="container">
+    
+    <!-- Centered Logo -->
+    <img src="M58_Inverse.png" alt="M58 Logo" class="logo" />
 
-  <div class="page-wrapper">
-
-    <!-- Logo -->
-    <div class="logo-container">
-      <img src="M58_Inverse.png" alt="M58 Logo" class="logo" />
-    </div>
-
-    <div class="spacer"></div>
-
-    <!-- Bottom content: Subscribe & Linktree -->
+    <!-- Subscribe + Linktree Section -->
     <div class="bottom-bar">
-      <!-- Mailchimp Form -->
+
+      <!-- Mailchimp -->
       <div id="mc_embed_signup">
         <form action="https://instagram.us10.list-manage.com/subscribe/post?u=2c86865122e34b95901383964&amp;id=a7d331babe&amp;f_id=00d84fe4f0"
               method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form"
@@ -31,50 +25,43 @@
             <div class="mc-field-group">
               <input type="email" name="EMAIL" id="mce-EMAIL" placeholder="Email Address" required />
             </div>
-            <div class="clear foot"></div>
+            <div style="position: absolute; left: -5000px;" aria-hidden="true">
+              <input type="text" name="b_2c86865122e34b95901383964_a7d331babe" tabindex="-1" value="">
+            </div>
           </div>
         </form>
       </div>
 
-      <!-- Linktree -->
+      <!-- Linktree Button -->
       <a href="https://linktr.ee/yourname" class="button linktree-button" target="_blank">Motion 58's Linktree</a>
     </div>
 
+    <!-- Feedback Message -->
+    <div id="subscribe-feedback"></div>
   </div>
 
-  <!-- Feedback -->
-  <div id="subscribe-feedback"></div>
-
-  <!-- Mailchimp script -->
   <script type="text/javascript" src="https://s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js"></script>
-  <script type="text/javascript">
+  <script>
     (function($) {
       window.fnames = new Array(); 
       window.ftypes = new Array();
-      fnames[0]='EMAIL'; ftypes[0]='email';
+      fnames[0] = 'EMAIL'; ftypes[0] = 'email';
     }(jQuery));
     var $mcj = jQuery.noConflict(true);
-  </script>
 
-  <script>
+    // Feedback Message
     const form = document.getElementById("mc-embedded-subscribe-form");
     const feedbackBox = document.getElementById("subscribe-feedback");
-
     form.addEventListener("submit", function (e) {
-      const emailInput = document.getElementById("mce-EMAIL");
-      const email = emailInput.value;
-
+      const email = document.getElementById("mce-EMAIL").value;
       setTimeout(() => {
         feedbackBox.textContent = `Subscribed ${email} successfully!`;
         feedbackBox.style.display = "block";
-
         setTimeout(() => {
           feedbackBox.style.display = "none";
         }, 4000);
       }, 800);
     });
   </script>
-
 </body>
 </html>
-
