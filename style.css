@@ -14,9 +14,26 @@ body {
 }
 
 /* Logo */
+.container {
+  min-height: 100vh;
+  background-color: #000;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 40px 20px;
+}
+
 .logo {
+  flex-grow: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.logo img {
   max-width: 300px;
-  margin-top: 60px;
+  height: auto;
 }
 
 /* Bottom container */
@@ -28,6 +45,7 @@ body {
   flex-wrap: wrap;
   margin-bottom: 40px;
 }
+
 
 /* Mailchimp form customization */
 #mc_embed_signup {
