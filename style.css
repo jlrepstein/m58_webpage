@@ -1,41 +1,54 @@
-body, html {
+/* Reset styles */
+* {
+  box-sizing: border-box;
+}
+
+html, body {
   margin: 0;
   padding: 0;
+  height: 100%;
   background-color: #000;
   color: #fff;
   font-family: Helvetica, Arial, sans-serif;
-  height: 100vh;
 }
 
+/* Use flex layout to split the page vertically */
 .container {
   display: flex;
   flex-direction: column;
+  justify-content: space-between;  /* Push content to top and bottom */
   align-items: center;
-  justify-content: center;
   height: 100vh;
   padding: 20px;
-  box-sizing: border-box;
-  text-align: center;
 }
 
-/* Logo Styling */
+/* ✅ FIXED: Center logo in remaining vertical space */
+.logo-wrapper {
+  flex: 1;                         /*  Take up all vertical space between top and bottom bar */
+  display: flex;
+  justify-content: center;        /*  Center horizontally */
+  align-items: center;            /*  Center vertically */
+  width: 100%;
+}
+
 .logo {
   max-width: 300px;
   width: 60%;
   height: auto;
-  margin-bottom: 40px;
 }
 
-/* Bottom bar with subscribe and linktree side-by-side */
+/* Bottom bar stays at bottom of the screen */
 .bottom-bar {
   display: flex;
   gap: 20px;
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
+  padding-bottom: 20px;
+  width: 100%;
 }
 
-/* Mailchimp Form */
+/* Mailchimp form styles */
 #mc_embed_signup {
   background-color: transparent;
   color: #fff;
@@ -58,7 +71,7 @@ body, html {
   box-sizing: border-box;
 }
 
-/* Linktree Button */
+/* Linktree button */
 .button {
   display: inline-block;
   padding: 12px 20px;
@@ -70,11 +83,10 @@ body, html {
   border-radius: 5px;
   width: 100%;
   max-width: 300px;
-  box-sizing: border-box;
   text-align: center;
 }
 
-/* Feedback Bubble */
+/* Feedback bubble (optional) */
 #subscribe-feedback {
   position: fixed;
   bottom: 20px;
@@ -87,7 +99,7 @@ body, html {
   z-index: 1000;
 }
 
-/* Responsive: Stack vertically on narrow screens */
+/* Responsive layout for smaller screens */
 @media (max-width: 600px) {
   .bottom-bar {
     flex-direction: column;
@@ -96,6 +108,5 @@ body, html {
 
   .logo {
     width: 70%;
-    margin-bottom: 30px;
   }
 }
