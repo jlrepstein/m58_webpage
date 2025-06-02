@@ -96,6 +96,23 @@ body {
 #mc_embed_signup .clear.foot img {
   display: none;
 }
+.button {
+  display: inline-block;
+  padding: 12px 20px;
+  background-color: white;
+  color: black;
+  text-align: center;
+  text-decoration: none;
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.linktree-button {
+  max-width: 300px;
+}
 
 @media (max-width: 600px) {
   .bottom-bar {
