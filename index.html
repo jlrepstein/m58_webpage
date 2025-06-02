@@ -57,5 +57,27 @@
     var $mcj = jQuery.noConflict(true);
   </script>
 
+  <div id="subscribe-feedback"></div>
+
+<script>
+  const form = document.getElementById("mc-embedded-subscribe-form");
+  const feedbackBox = document.getElementById("subscribe-feedback");
+
+  form.addEventListener("submit", function (e) {
+    const emailInput = document.getElementById("mce-EMAIL");
+    const email = emailInput.value;
+
+    // Slight delay to allow Mailchimp to process
+    setTimeout(() => {
+      feedbackBox.textContent = `Subscribed ${email} successfully!`;
+      feedbackBox.style.display = "block";
+
+      setTimeout(() => {
+        feedbackBox.style.display = "none";
+      }, 4000);
+    }, 800);
+  });
+</script>
+
 </body>
 </html>

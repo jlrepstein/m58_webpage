@@ -80,6 +80,21 @@ body {
   margin-top: 12px;
 }
 
+/* Mailchimp form hover effect */
+
+#subscribe-feedback {
+  position: fixed;
+  bottom: 80px;
+  background-color: #0f0;
+  color: black;
+  padding: 12px 20px;
+  border-radius: 5px;
+  font-weight: bold;
+  display: none;
+  z-index: 1000;
+}
+
+
 /* Linktree */
 .linktree {
   color: #fff;
