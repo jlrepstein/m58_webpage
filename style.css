@@ -34,7 +34,7 @@ html, body {
 
 /* Make logo bigger */
 .logo {
-  max-width: 500px;                   
+  max-width: 1200px;                   
   width: 80%;                         /* Scale relative to screen size */
   height: auto;
 }
